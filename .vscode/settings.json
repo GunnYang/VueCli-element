@@ -34,5 +34,6 @@
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+  "vetur.format.defaultFormatter.js": "vscode-typescript"
 }

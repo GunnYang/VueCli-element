@@ -11,7 +11,7 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     // 强制使用单引号
-    quotes: ['warn', 'single'],
+    // quotes: ['warn', 'single'],
     // 强制不使用分号结尾
     semi: ['warn', 'never']
   }
