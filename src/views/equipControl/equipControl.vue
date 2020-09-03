@@ -91,7 +91,9 @@ export default {
       }
       this.socketApi.sendSock(msg, e => {
         console.log(e + '1')
-        this.equipArr[index].loading = false
+        setTimeout(() => {
+          this.equipArr[index].loading = false
+        }, 60000)
       })
     },
     // 重启按钮
@@ -176,7 +178,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // align-items: center;
   overflow: hidden;
   &-block {
     overflow: auto;
@@ -276,6 +277,13 @@ export default {
         color: #cecece;
       }
     }
+  }
+  &-block::after {
+    content: '';
+    width: 30%; //这个宽度和子元素宽度一致
+    height: 0;
+    margin: 10px;
+    display: block;
   }
   &-refresh {
     height: 15%;

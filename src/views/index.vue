@@ -95,7 +95,7 @@ export default {
     onDelSet(index) {
       this.preArr[index].visible = false
       let msg = {
-        type: 'UpdatePresetDataByName',
+        type: 'DeletePresetDataByName',
         val: this.preArr[index].name
       }
       const loading = this.$loading({
@@ -109,8 +109,9 @@ export default {
       }, 1000)
       this.socketApi.sendSock(msg, () => {
         console.log(index)
-        this.mountedEnter()
+        // this.mountedEnter()
       })
+      this.mountedEnter()
     },
     // 添加新的预设
     onAddBlock() {
@@ -160,7 +161,6 @@ export default {
     border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     .section {
       margin: 0 15px;
       width: 164px;
@@ -214,12 +214,6 @@ export default {
         color: #fff;
       }
     }
-  }
-  &-content::after {
-    content: '';
-    width: 160px;
-    height: 0;
-    display: block;
   }
 }
 .img-set {

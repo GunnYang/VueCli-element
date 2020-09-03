@@ -165,6 +165,13 @@ export default {
       }
     }
   }
+  &-block::after {
+    content: '';
+    width: 30%;
+    height: 0;
+    display: block;
+    margin: 10px;
+  }
   &-refresh {
     height: 15%;
     display: flex;
